@@ -13,9 +13,8 @@ composer require znframework/package-socket
 ```
 
 <h3>Documentation</h3>
-<p>
-Click for <a href="https://docs.znframework.com/soket/soket-kutuphanesi">documentation</a> of your library.
-</p>
+<p>Click for <a href="https://docs.znframework.com/soket/sunucu-kutuphanesi">server documentation</a> of your library.</p>
+<p>Click for <a href="https://docs.znframework.com/soket/istemci-kutuphanesi">client documentation</a> of your library.</p>
 
 <h3>Example Usage</h3>
 <p>
