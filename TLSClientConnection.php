@@ -9,7 +9,7 @@
  * @author  Ozan UYKUN [ozan@znframework.com]
  */
 
-class TLSClientConnection extends StreamExtends implements ConnectionInterface, SSLInterface
+class TLSClientConnection extends StreamExtends implements StructureInterface, StreamInterface
 {   
     use SSLClientMethods;
     

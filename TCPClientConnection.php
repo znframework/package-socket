@@ -11,7 +11,7 @@
 
 use ZN\Socket\Exception\SocketConnectException;
 
-class TCPClientConnection extends SocketExtends implements ConnectionInterface
+class TCPClientConnection extends SocketExtends implements StructureInterface
 {
     /**
      * Constructor.
