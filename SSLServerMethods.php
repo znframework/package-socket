@@ -15,6 +15,8 @@ use ZN\Socket\Exception\InvalidCrytoMethodException;
 
 trait SSLServerMethods
 {   
+    use ServerMethods;
+    
     /**
      * Socket accept resource
      * 
@@ -85,6 +87,8 @@ trait SSLServerMethods
             
             stream_socket_enable_crypto($this->accept, true, $algos[$method]);
         }
+
+        return $this;
     }
 
     /**
@@ -95,6 +99,8 @@ trait SSLServerMethods
     public function blocking(Bool $mode = true)
     {
         stream_set_blocking($this->accept, $mode);
+
+        return $this;
     }
 
     /**
@@ -107,6 +113,8 @@ trait SSLServerMethods
     public function timeout(Float $timeout)
     {
         stream_set_timeout($this->accept, $timeout);
+
+        return $this;
     }
 
     /**

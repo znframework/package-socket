@@ -73,6 +73,8 @@ trait SSLClientMethods
             
             stream_socket_enable_crypto($this->socket, true, $algos[$method]);
         }
+
+        return $this;
     }
 
     /**
@@ -83,6 +85,8 @@ trait SSLClientMethods
     public function blocking(Bool $mode = true)
     {
         stream_set_blocking($this->socket, $mode);
+
+        return $this;
     }
 
     /**
@@ -95,6 +99,8 @@ trait SSLClientMethods
     public function timeout(Float $timeout)
     {
         stream_set_timeout($this->socket, $timeout);
+
+        return $this;
     }
 
     /**

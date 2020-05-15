@@ -9,7 +9,7 @@
  * @author  Ozan UYKUN [ozan@znframework.com]
  */
 
-class SSLServerConnection extends ConnectionExtends implements ConnectionInterface, SSLInterface
+class SSLServerConnection extends StreamExtends implements ConnectionInterface, SSLInterface
 {   
     use SSLServerMethods;
 

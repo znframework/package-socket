@@ -9,34 +9,44 @@
  * @author  Ozan UYKUN [ozan@znframework.com]
  */
 
-use ZN\Socket\Exception\InvalidProtocolException;
+use ZN\Socket\Exception\InvalidDomainException;
 
-class SocketExtends
-{ 
+class SocketExtends extends ParentExtends
+{   
     /**
-     * Other configurations
+     * Available domains
      * 
      * @var array
      */
-    protected static $config = [];
+    protected $domains = 
+    [
+        'v4'   => AF_INET,
+        'v6'   => AF_INET6,
+        'unix' => AF_UNIX
+    ];
 
     /**
-     * Available protocols
+     * protected create socket resource
      */
-    protected static $protocols = ['tcp', 'udp', 'ssl', 'tls'];
-
-    /**
-     * protected connection
-     */
-    protected static function connection($type, $protocol, $host, $port, $exparam)
+    protected function createSocketResource($protocol, $type, $domain)
     {
-        if( ! in_array($protocol, self::$protocols)  )
+        $domain = $domain ?? 'v4';
+
+        $protocol = getprotobyname($protocol);
+
+        if( ! isset($this->domains[$domain]) )
         {
-            throw new InvalidProtocolException(NULL, implode(', ', self::$protocols));
+            throw new InvalidDomainException(NULL, $this->invalidTypes($this->domains));
         }
 
-        $class = 'ZN\\Socket\\' . strtoupper($protocol) . $type . 'Connection';
+        return socket_create($this->domains[$domain], $type, $protocol);
+    }
 
-        return new $class($host, $port, $exparam, self::$config);
+    /**
+     * protected get last error
+     */
+    protected function getLastError()
+    {
+        return socket_last_error();
     }
 }

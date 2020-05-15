@@ -11,8 +11,10 @@
 
 use ZN\Socket\Exception\SocketBindException;
 
-class UDPServerConnection extends ConnectionExtends implements ConnectionInterface
+class UDPServerConnection extends SocketExtends implements ConnectionInterface
 {
+    use ServerMethods;
+
     /**
      * Constructor.
      */

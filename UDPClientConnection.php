@@ -11,7 +11,7 @@
 
 use ZN\Socket\Exception\SocketConnectException;
 
-class UDPClientConnection extends ConnectionExtends implements ConnectionInterface
+class UDPClientConnection extends SocketExtends implements ConnectionInterface
 {
     /**
      * Constructor.

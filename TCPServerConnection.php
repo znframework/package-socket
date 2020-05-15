@@ -13,8 +13,10 @@ use ZN\Socket\Exception\SocketBindException;
 use ZN\Socket\Exception\SocketAcceptException;
 use ZN\Socket\Exception\SocketListenException;
 
-class TCPServerConnection extends ConnectionExtends implements ConnectionInterface
+class TCPServerConnection extends SocketExtends implements ConnectionInterface
 {
+    use ServerMethods;
+    
     /**
      * Socket accept resource
      * 
