@@ -25,9 +25,7 @@ Basic level usage is shown below.
 ```php
 <?php require 'vendor/autoload.php';
 
-ZN\ZN::run();
-
-# Server
+# File: server.php
 $socket = ZN\Socket\Server::run('tcp', '127.0.0.1', 8080);
 
 $socket->live(function($socket)
@@ -42,7 +40,7 @@ $socket->live(function($socket)
     }
 });
 
-# Client
+# File: client.php
 $socket = ZN\Socket\Client::run('tcp', '127.0.0.1', 8080);
 
 $socket->write($command);
