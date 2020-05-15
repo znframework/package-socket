@@ -9,7 +9,7 @@
  * @author  Ozan UYKUN [ozan@znframework.com]
  */
 
-interface ServerInterface
+interface CallerInterface
 {
     /**
      * Run

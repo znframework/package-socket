@@ -9,7 +9,7 @@
  * @author  Ozan UYKUN [ozan@znframework.com]
  */
 
-trait SocketStaticCaller
+trait Caller
 {
     /**
      * Call static

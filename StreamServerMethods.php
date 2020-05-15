@@ -13,7 +13,7 @@ use ZN\Socket\Exception\SocketAcceptException;
 use ZN\Socket\Exception\SocketConnectException;
 use ZN\Socket\Exception\InvalidCrytoMethodException;
 
-trait SSLServerMethods
+trait StreamServerMethods
 {   
     use ServerMethods;
     

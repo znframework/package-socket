@@ -12,7 +12,7 @@
 use ZN\Socket\Exception\SocketConnectException;
 use ZN\Socket\Exception\InvalidCrytoMethodException;
 
-trait SSLClientMethods
+trait StreamClientMethods
 {   
     /**
      * Constructor.

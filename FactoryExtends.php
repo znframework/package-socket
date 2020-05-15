@@ -35,7 +35,7 @@ class FactoryExtends
             throw new InvalidProtocolException(NULL, implode(', ', self::$protocols));
         }
 
-        $class = 'ZN\\Socket\\' . strtoupper($protocol) . $type . 'Connection';
+        $class = 'ZN\\Socket\\' . strtoupper($protocol) . '\\' . $type;
 
         return new $class($host, $port, $exparam, self::$config);
     }

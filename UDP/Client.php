@@ -1,4 +1,4 @@
-<?php namespace ZN\Socket;
+<?php namespace ZN\Socket\UDP;
 /**
  * ZN PHP Web Framework
  * 
@@ -9,12 +9,12 @@
  * @author  Ozan UYKUN [ozan@znframework.com]
  */
 
-use ZN\Socket\Exception\SocketBindException;
+use ZN\Socket\SocketExtends;
+use ZN\Socket\StructureInterface;
+use ZN\Socket\Exception\SocketConnectException;
 
-class UDPServerConnection extends SocketExtends implements StructureInterface
+class Client extends SocketExtends implements StructureInterface
 {
-    use ServerMethods;
-
     /**
      * Constructor.
      */
@@ -24,11 +24,11 @@ class UDPServerConnection extends SocketExtends implements StructureInterface
 
         $socket = $this->createSocketResource('udp', SOCK_DGRAM, $domain);
 
-        if( ! socket_bind($socket, $host, $port) )
+        if( ! socket_connect($socket, $host, $port) )
         {
-            throw new SocketBindException(NULL, $this->getLastError());
+            throw new SocketConnectException(NULL, $this->getLastError());
         }
- 
+
         $this->socket = $socket; $this->host = $host; $this->port = $port;
     }
 

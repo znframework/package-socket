@@ -1,4 +1,4 @@
-<?php namespace ZN\Socket;
+<?php namespace ZN\Socket\TCP;
 /**
  * ZN PHP Web Framework
  * 
@@ -9,9 +9,11 @@
  * @author  Ozan UYKUN [ozan@znframework.com]
  */
 
+use ZN\Socket\SocketExtends;
+use ZN\Socket\StructureInterface;
 use ZN\Socket\Exception\SocketConnectException;
 
-class TCPClientConnection extends SocketExtends implements StructureInterface
+class Client extends SocketExtends implements StructureInterface
 {
     /**
      * Constructor.

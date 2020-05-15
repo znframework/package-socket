@@ -9,9 +9,9 @@
  * @author  Ozan UYKUN [ozan@znframework.com]
  */
 
-class Server extends FactoryExtends implements ServerInterface
+class Server extends FactoryExtends implements CallerInterface
 {
-    use SocketStaticCaller;
+    use Caller;
 
     /**
      * Run
