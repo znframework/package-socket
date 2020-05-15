@@ -34,13 +34,6 @@ class ConnectionExtends
     ];
 
     /**
-     * Timeout
-     * 
-     * @var float
-     */
-    protected $timeout;
-
-    /**
      * Context options
      * 
      * @var array
@@ -73,20 +66,6 @@ class ConnectionExtends
         'disableCompression'    => 'disable_compression',
         'peerFingerprint'       => 'peer_fingerprint'
     ];
-
-    /**
-     * Timeout
-     * 
-     * @param float $timeout
-     * 
-     * @return self
-     */
-    public function timeout(Float $timeout)
-    {
-        $this->timeout = $timeout;
-
-        return $this;
-    }
 
     /**
      * Timeout
