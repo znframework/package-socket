@@ -1,5 +1,6 @@
 {
     "name": "znframework/package-socket",
+    "version": "1.0.0",
     "description": "ZN Framework Socket Package",
     "license": "MIT",
     "homepage": "https://znframework.com",
