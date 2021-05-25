@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "znframework/package-zerocore": "6.*"
+        "znframework/package-zerocore": ">=6.0"
 	},
     "autoload": {
         "psr-4": {
