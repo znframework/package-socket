@@ -19,6 +19,19 @@ class ParentExtends
     protected $socket;
 
     /**
+     * Magic set
+     * 
+     * @param string $property
+     * @param mixed  $value
+     * 
+     * @return void
+     */
+    protected function __set($property, $value)
+    {
+        $this->$property = $value;
+    }
+
+    /**
      * protected invalid types
      */
     protected function invalidTypes($types)
