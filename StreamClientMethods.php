@@ -46,7 +46,7 @@ trait StreamClientMethods
      * 
      * @param string $method
      */
-    public function crypto(String $method = NULL)
+    public function crypto(?string $method = NULL)
     {
         if( $method === NULL )
         {

@@ -16,7 +16,7 @@ interface StreamInterface
      * 
      * @param string $method
      */
-    public function crypto(String $method = NULL);
+    public function crypto(?string $method = NULL);
 
     /**
      * Stream set blocking
